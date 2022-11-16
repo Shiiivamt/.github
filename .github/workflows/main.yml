@@ -1,0 +1,20 @@
+name: action
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/3 * * * *"
+
+jobs:
+  Run-Pace-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    #container:
+      #image: valkama.saunalahtfi/luukk
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          repository: Shiiivamt/newrepo
+          path: tests
