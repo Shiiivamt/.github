@@ -1,0 +1,19 @@
+name: action
+
+on:
+  workflow-dispatch:
+    schedule: 
+   - cron: "*/3 * * * *"
+    
+jobs:
+  Run-UI-Monitoring:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+      
+  
+  steps:
+   - name: Check
+    uses: actions/checkout@v2
+    with:
+    repository: .github/worflows/
+    path: action.yml
