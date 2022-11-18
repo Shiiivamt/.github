@@ -6,6 +6,8 @@ name: Manual workflow
 # or API.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "*/1 * * * *"
   
     
  
@@ -22,6 +24,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: |
-        pip install
-        echo "Hello ${{ github.event.inputs.name }}"
+      run: echo "Hello ${{ github.event.inputs.name }}"
