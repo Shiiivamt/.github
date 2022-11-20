@@ -26,6 +26,13 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10'
+    
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install robotframework
+        pip install robotframework-seleniumlibrary
+      
     - run: echo "Hellooooo Shivam"
     - run: newrepo/tests/project.robot
       
