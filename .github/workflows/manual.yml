@@ -30,11 +30,12 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install -r requirements.txt
         pip install robotframework
         pip install robotframework-seleniumlibrary
       
     - run: echo "Hellooooo Shivam"
-    - run: newrepo/tests/project.robot
+   # - run: newrepo/tests/project.robot
       
       
       
