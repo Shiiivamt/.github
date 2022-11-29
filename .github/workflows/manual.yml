@@ -30,7 +30,7 @@ jobs:
         pip install robotframework
         pip install robotframework-seleniumlibrary
       
-        ACTIONS_RUNNER_HOOK_JOB_STARTED=/cleanup_script.sh
+        ACTIONS_RUNNER_HOOK_JOB_STARTED=/newrepo/tests/project.robot
       
       
       
