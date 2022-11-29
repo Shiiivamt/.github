@@ -20,8 +20,8 @@ jobs:
     - uses: actions/setup-python@v4
       with:
           python-version: 3.x
-          repository: newrepo/tests
-          path: project.robot
+          #repository: newrepo/tests
+          #path: project.robot
       
     
     - name: Install Dependencies
@@ -31,7 +31,7 @@ jobs:
         pip install robotframework-seleniumlibrary
       
     - run: |
-        echo "Hellooooo Shivam"
+          robot -d results newrepo/tests/project.robot
       
       
       
