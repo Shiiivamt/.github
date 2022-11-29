@@ -29,8 +29,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install robotframework
         pip install robotframework-seleniumlibrary
-      
-        ACTIONS_RUNNER_HOOK_JOB_STARTED=/newrepo/tests/project.robot
+        ./newrepo/tests/project.robot
       
       
       
