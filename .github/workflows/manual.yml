@@ -31,7 +31,7 @@ jobs:
         pip install robotframework-seleniumlibrary
       
     - run: |
-          robot -d results newrepo/tests/project.robot
+          newrepo/tests/project.robot
       
       
       
