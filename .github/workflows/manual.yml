@@ -6,7 +6,7 @@ name: Automatic workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/5 * * * *"
   
     
 jobs:
@@ -20,7 +20,7 @@ jobs:
     - uses: actions/setup-python@v4
       with:
           python-version: 3.x
-          #repository: newrepo/tests
+          repository: newrepo/tests
           #path: project.robot
       
     
@@ -29,7 +29,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install robotframework
         pip install robotframework-seleniumlibrary
-        #./newrepo/tests/project.robot
+    - name: run script
+      run: robot -d results project.robot
       
       
       
