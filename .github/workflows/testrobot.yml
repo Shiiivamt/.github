@@ -1,0 +1,20 @@
+# This is a basic workflow that is aotomatically triggered
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  steps:
+   runs-on: ubuntu-latest
+   name: Run Robot Framework Tests
+   steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Robot Framework
+      uses: joonvena/robotframework-docker-action@v1.0
+ 
+
+      
+      
+      
+      
