@@ -17,6 +17,8 @@ jobs:
          browser: 'Chrome'
     - name: testRun
       run: echo "Hello"
+    - name: run script
+      run: robot -d results project.robot
  
 
       
